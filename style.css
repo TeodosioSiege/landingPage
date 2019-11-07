@@ -13,7 +13,9 @@
     box-sizing: border-box;
   }
   
-  
+  html {
+    scroll-behavior: smooth;
+  }
   /* 2. Typography Styles */
   
   .container--typography, ::placeholder, .nav-link {
