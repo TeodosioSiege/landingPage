@@ -1,0 +1,284 @@
+/* 1. Global Styles*/
+:root {
+    --serif :  "Lobster";
+    --sans-serif: "Lato";
+    --bg-color: hsl(45, 100%, 98%);
+    --color:  hsl(45, 50%, 33%);
+    --accent: hsl(255, 65%, 50%);
+    --tint:  hsl(45, 100%, 95%);
+  }
+  * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  
+  
+  /* 2. Typography Styles */
+  
+  .container--typography, ::placeholder, .nav-link {
+    font-family: var(--sans-serif);
+    line-height: 1.5;
+  }
+  
+  h1, h2, h3, h4, h5, h6, .nav-main-option {
+    font-family: var(--serif); 
+    letter-spacing: 0.1em;
+    color: var(--accent);
+  }
+  
+  /*3. Structure Styles */
+  .container {
+    background-color: var(--bg-color);
+    min-height: 100vh;
+    color: var(--color);
+  }
+  
+  
+  /*4. Module Styles */
+  
+  .header {
+    background: url('https://upload.wikimedia.org/wikipedia/commons/b/b9/Yawning_Infant%2C_August_2018.jpg');
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 66vh;
+    margin-bottom: 5px;
+    position: relative;
+  }
+  
+  
+  .nav-bar {
+    z-index: 1;
+    display: flex;
+    width: 100vw;
+    position: fixed;
+    top: 5px;
+    width: 100vw;
+    justify-items: stretch;
+    align-items: flex-end;
+  }
+  
+  /*5. Component Styles*/
+  .nav-main-option {
+    margin-right: auto;
+    text-decoration: none;
+    font-size: 1.2em;
+  }
+  .nav-main-option * {
+    text-shadow: 0 0 5px var(--tint);
+  }
+  
+   .nav-link {
+     text-decoration: none;
+     justify-self: flex-end;
+     color: var(--accent);
+     text-shadow: 0 0 5px var(--tint);
+  }
+  .nav-link::after {
+    content:"|";
+    margin: 0 5px;
+  }
+  .nav-link:last-child {
+    padding-right: 5px;
+  }
+  .nav-link:last-child::after {
+    display: none;
+  }
+  .nav-link:hover {
+    text-decoration: underline;
+  }
+  
+  .header-form {
+    position:absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    text-align: center;
+    height: 25vh;
+    width: 66vw;
+  }
+  .header-form h1 {
+    font-size: 1em;
+    text-shadow: 0 0 5px var(--tint);
+  }
+  .header-img {
+    height: 1em;
+    width: auto;
+    padding-right: 5px;
+  }
+  
+  #email {
+    width: 100%;
+    padding: 5px;
+    border-radius: 5px;
+  }
+  
+  #email:focus {
+    background-color: var(--tint);
+    outline: none;
+    box-shadow: 0 0 15px var(--accent);
+    animation-name: onhover;
+    animation-duration: 500ms;
+    animation-fill-mode: forwards;
+  }
+  
+  #email:hover {
+    animation-name: onhover;
+    animation-duration: 500ms;
+    animation-fill-mode: forwards;}
+  
+  #submit {
+    width: 100%;
+    border-radius: 5px;
+    background-color: var(--accent);
+    padding: 5px;
+    margin-top: 5px;
+    color: white;
+    letter-spacing: 0.1em;
+  }
+  
+  #submit:hover {
+    animation-name: onhover;
+    animation-duration: 500ms;
+    animation-fill-mode: forwards;
+  }
+  
+  @keyframes onhover {
+    100% {transform: scale(1.1);}
+  }
+  
+  #features {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 66%;
+    margin: 10vh auto;
+    grid-row-gap: 10vh;
+  }
+  
+  #features div {
+    justify-items: stretch;
+  }
+  
+  #features i {
+    display: none;
+  }
+  
+  #features p {
+    text-align: justify;
+  }
+  
+  #bestseller {
+    width: 90%;
+    margin: 5vh auto;
+  }
+  
+  #bestseller iframe {
+    width: 100%;
+  }
+  
+  #pricing {
+    width: 66%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    justify-items: center;
+    flex-direction: column;
+  }
+  #pricing article {
+    border: 3px solid var(--color);
+    width: 100%;
+    margin-bottom: 5vh;
+    text-align: center;
+    padding-bottom: 10px;
+  }
+  
+  #pricing h3 {
+    background-color: var(--tint);
+    padding: 10px;
+  }
+  
+  #pricing h4 {
+    margin: 5px 0;
+  }
+  
+  footer {
+    background-color: var(--tint);
+    margin-top: 5px;
+  }
+  
+  .footer-links {
+    display: flex;
+    width: 80%;
+    justify-content: flex-end;
+    list-style-type: none;
+    margin: 0 auto;
+  }
+  
+  .footer-link-items a{
+    padding: 5px;
+    text-decoration: none;
+    line-height: 2;
+    color: var(--accent);
+  }
+  
+  .footer-link-items a:hover{
+    text-decoration: underline;
+  }
+  
+  .copyright {
+    text-align: right;
+    width: 80%;
+    margin: 0 auto;
+    padding-right: 5px;
+  }
+  
+  
+  
+  
+  @media only screen AND (min-width: 768px) {
+    .header {
+      background-size: cover;
+      height: 100vh;
+    }
+    .nav-bar {
+      padding: 0 25px;
+    }
+    .header-form{
+    height: 25vh;
+    width: 33vw;
+    }
+    .header-form h1 {
+    font-size: 1.75em;
+  }
+    #features {
+      grid-template-columns: 1fr 3fr;
+      grid-column-gap: 10vh;
+    }
+   #features i {
+      display: initial;
+      justify-self: center;
+  }
+  #bestseller {
+    width: 50%;
+    margin: 0 auto;
+  }
+    
+    #pricing {
+      margin-top: 10vh;
+      flex-direction: row;
+    }
+  #pricing article {
+      width: 30%;
+    }
+  }
+  
+  
+  @media only screen AND (max-width: 340px) {
+    #shop-name {
+      display: none;
+    }
+  }
+  
