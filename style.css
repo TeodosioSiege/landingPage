@@ -249,6 +249,14 @@ footer {
 }
 
 @media only screen AND (min-width: 768px) {
+  .nav-link {
+    padding-right: 0.5em;
+  }
+  .nav-link::after {
+    content: "|";
+    margin: 0 5px;
+    margin-left: 1em;
+  }
   .header {
     background-size: cover;
     height: 100vh;
