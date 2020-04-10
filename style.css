@@ -181,15 +181,18 @@ h6,
 }
 
 #features div {
-  justify-items: stretch;
+  justify-items: center;
 }
 
 #features i {
   display: none;
 }
-
+.feature-card-title {
+  margin-bottom: 1rem;
+}
 #features p {
-  text-align: justify;
+  text-align: left;
+  line-height: 2;
 }
 
 #bestseller {
