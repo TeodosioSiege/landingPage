@@ -61,16 +61,30 @@ h6,
 }
 
 .nav-bar {
-  z-index: 1;
+  z-index: 2;
   display: flex;
   width: 100vw;
   position: fixed;
-  top: 5px;
+  top: 1em;
   left: 0;
   right: 0;
   width: 100vw;
   justify-items: stretch;
   align-items: flex-end;
+}
+.nav-bar img {
+  position: relative;
+  top: 0.15em;
+}
+.nav-bar::after {
+  content: "";
+  width: 100vw;
+  height: 4em;
+  background-color: hsla(45, 100%, 98%, 0.7);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
 }
 
 /*5. Component Styles*/
@@ -315,5 +329,10 @@ footer {
 @media only screen AND (max-width: 340px) {
   #shop-name {
     display: none;
+  }
+  .nav-bar img {
+    position: relative;
+    top: 0.3em;
+    left: 1em;
   }
 }
