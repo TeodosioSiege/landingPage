@@ -15,7 +15,7 @@
     <nav id="nav-bar" class="nav-bar">
       <a href="#header" class="nav-main-option"><img src="http://drive.google.com/uc?export=view&id=1UmiDbFtO8MePKrxqCxu3IFTGw5ZgurAv" alt="" id="header-img" class="header-img">
       <span id="shop-name">Eliz Shop</span></a>
-      <a href="#features"class="nav-link">Features</a>
+      <a href="#features"class="nav-link test">Features</a>
       <a href="#bestseller"class="nav-link">Bestseller</a>
       <a href="#pricing"class="nav-link">Pricing</a>        
     </nav>
@@ -97,7 +97,19 @@
 
 <script src="https://kit.fontawesome.com/752a9a7084.js" crossorigin="anonymous"></script>
 
+<script>
+let x = document.getElementsByClassName('nav-link');
+document.onscroll = function() {
+  if(document.elementFromPoint(0,100) == document.getElementById('header')){
+    // document.querySelector('.nav-bar::after').style.content = 'none';
+    document.styleSheets[0].addRule('.nav-bar::after','height: 0');
+  }else {
+    
+    document.styleSheets[0].addRule('.nav-bar::after','height: 4em');
+  }
+}
 
+</script>
 
 <!-- <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script> -->
 </body>

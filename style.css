@@ -79,12 +79,13 @@ h6,
 .nav-bar::after {
   content: "";
   width: 100vw;
-  height: 4em;
-  background-color: hsla(45, 100%, 98%, 0.7);
+  height: 0;
+  background-color: hsla(45, 100%, 98%, 0.8);
   position: fixed;
   top: 0;
   left: 0;
   z-index: -1;
+  transition: height 300ms;
 }
 
 /*5. Component Styles*/
